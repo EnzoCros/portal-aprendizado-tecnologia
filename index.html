@@ -139,9 +139,7 @@
     }
 
     .modal h2 { font-size: 1.2rem; margin-bottom: 10px; color: #1a1a2e; }
-
     .modal p { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 20px; }
-
     .modal-domain { font-size: 0.8rem; color: #999; margin-bottom: 20px; }
 
     .modal-btn {
@@ -343,37 +341,15 @@
     <p>Plataformas para aprender, se certificar e crescer na carreira.</p>
 
     <div class="category">
-      <h3>Grow with Google</h3>
+      <h3>Google Skills</h3>
       <div class="links">
         <div class="link-item" onclick="openModal('Google Skills — Catálogo Completo', 'Plataforma', 'skills.google.com', 'Todos os treinamentos e certificações do Google reunidos em um só lugar, disponíveis em português. Ótima plataforma gratuita para estudantes de TI.', 'https://www.skills.google/catalog?locale=pt_BR')">
           <div class="link-info"><strong>Google Skills — Catálogo Completo</strong><span>skills.google.com</span></div>
           <span class="link-tag">Plataforma</span>
         </div>
-        <div class="link-item" onclick="openModal('Treinamentos em Inteligência Artificial', 'IA', 'grow.google', 'Cursos e ferramentas do Google para aprender e trabalhar com Inteligência Artificial. Do básico ao avançado, tudo gratuito.', 'https://grow.google/ai/')">
-          <div class="link-info"><strong>Treinamentos em Inteligência Artificial</strong><span>grow.google</span></div>
-          <span class="link-tag">IA</span>
-        </div>
-        <div class="link-item" onclick="openModal('AI for Students', 'Estudantes', 'grow.google', 'Ferramentas gratuitas de estudo, escrita e carreira com IA especialmente desenvolvidas para estudantes pelo Google.', 'https://grow.google/students/')">
-          <div class="link-info"><strong>AI for Students</strong><span>grow.google</span></div>
-          <span class="link-tag">Estudantes</span>
-        </div>
-        <div class="link-item" onclick="openModal('Career Dreamer', 'Carreira', 'grow.google', 'Ferramenta do Google que te ajuda a descobrir possíveis caminhos de carreira e montar um currículo forte para a área que você deseja.', 'https://grow.google/career-dreamer/')">
-          <div class="link-info"><strong>Career Dreamer — Planejamento de Carreira</strong><span>grow.google</span></div>
-          <span class="link-tag">Carreira</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>Udemy — Google Certificates</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Google AI Professional Certificate', 'Certificado', 'udemy.com', 'Trilha de aprendizado na Udemy para conquistar o certificado profissional de Inteligência Artificial do Google. Reconhecido mundialmente pelo mercado.', 'https://www.udemy.com/partner/google/ai-professional-certificate-learning-path/')">
-          <div class="link-info"><strong>Google AI Professional Certificate</strong><span>udemy.com</span></div>
-          <span class="link-tag">Certificado</span>
-        </div>
-        <div class="link-item" onclick="openModal('Accelerate Your Job Search with AI', 'Carreira', 'udemy.com', 'Aprenda a usar Inteligência Artificial para acelerar sua busca por emprego na área de tecnologia. Dicas práticas para se destacar no mercado.', 'https://www.udemy.com/partner/google/accelerate-job-search-with-ai-learning-path/')">
-          <div class="link-info"><strong>Accelerate Your Job Search with AI</strong><span>udemy.com</span></div>
-          <span class="link-tag">Carreira</span>
+        <div class="link-item" onclick="openModal('Google Cloud — Cursos e Certificações', 'Cloud', 'cloud.google.com', 'Aprenda e se certifique nos serviços de nuvem do Google. Ótimo para quem quer trabalhar com infraestrutura e tecnologia em larga escala.', 'https://cloud.google.com/learn?hl=pt-BR')">
+          <div class="link-info"><strong>Google Cloud — Cursos e Certificações</strong><span>cloud.google.com</span></div>
+          <span class="link-tag">Cloud</span>
         </div>
       </div>
     </div>
@@ -463,7 +439,6 @@
 </div>
 
 <script>
-  // NAV
   const navLinks = document.querySelectorAll('nav a');
   const sections = document.querySelectorAll('.section');
 
@@ -477,7 +452,6 @@
     });
   });
 
-  // MODAL
   function openModal(title, tag, domain, desc, url) {
     document.getElementById('modalTitle').textContent = title;
     document.getElementById('modalTag').textContent = tag;
