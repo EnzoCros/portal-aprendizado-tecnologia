@@ -1,34 +1,415 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Portal de Aprendizado em Tecnologia</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Aprendizado em Tecnologia</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    nav {
+      background: #16213e;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+      padding: 12px;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background: #0f3460;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    .section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+      color: #1a1a2e;
+    }
+
+    .section > p {
+      color: #666;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+    }
+
+    .category {
+      margin-bottom: 32px;
+    }
+
+    .category h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .link-item {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .link-item:hover {
+      border-color: #0f3460;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .link-info strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+    }
+
+    .link-info span {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .link-tag {
+      font-size: 0.72rem;
+      background: #eef2ff;
+      color: #3b5bdb;
+      padding: 3px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #999;
+      font-size: 0.8rem;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    footer a { color: #3b5bdb; text-decoration: none; }
+  </style>
+</head>
 <body>
 
-<h1>Portal de Aprendizado em Tecnologia</h1>
+<header>
+  <h1>Portal de Aprendizado em Tecnologia</h1>
+  <p>Referências para estudantes de colégios técnicos e faculdades de tecnologia</p>
+</header>
 
-<p>Referências para alunos de tecnologia</p>
+<nav>
+  <a href="#" class="active" data-target="programacao">💻 Programação</a>
+  <a href="#" data-target="banco-dados">🗄️ Banco de Dados</a>
+  <a href="#" data-target="eletronica">⚡ Eletrônica</a>
+  <a href="#" data-target="treinamento">🏆 Treinamentos</a>
+  <a href="#" data-target="projetos">🚀 Projetos Especiais</a>
+</nav>
 
-<h2>Categorias</h2>
+<main>
 
-<ul>
-<li>Programação</li>
-<li>Banco de Dados</li>
-<h2>Eletrônica</h2>
+  <!-- PROGRAMAÇÃO -->
+  <div class="section active" id="programacao">
+    <h2>💻 Programação</h2>
+    <p>Cursos e referências para aprender linguagens e desenvolvimento.</p>
 
-<ul>
-<li><a href="raspberry.html">Raspberry Pi</a></li>
-</ul>
-<li>Treinamento e Certificações</li>
-<li>Artes</li>
-<li>Música</li>
-<li>Projetos Especiais</li>
-</ul>
+    <div class="category">
+      <h3>Google Skills</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.skills.google/catalog?keywords=java&locale=pt_BR" target="_blank">
+          <div class="link-info"><strong>Cursos sobre Java</strong><span>skills.google.com</span></div>
+          <span class="link-tag">Curso</span>
+        </a>
+        <a class="link-item" href="https://www.skills.google/catalog?keywords=firebase&locale=pt_BR" target="_blank">
+          <div class="link-info"><strong>Cursos sobre Firebase</strong><span>skills.google.com</span></div>
+          <span class="link-tag">Curso</span>
+        </a>
+        <a class="link-item" href="https://projects.raspberrypi.org/pt-BR" target="_blank">
+          <div class="link-info"><strong>Projetos Raspberry Pi (PT-BR)</strong><span>projects.raspberrypi.org</span></div>
+          <span class="link-tag">Tutoriais</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>APIs de Pagamento</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.mercadopago.com.br/developers/pt" target="_blank">
+          <div class="link-info"><strong>API do Mercado Pago</strong><span>mercadopago.com.br</span></div>
+          <span class="link-tag">Documentação</span>
+        </a>
+        <a class="link-item" href="https://developer.pagbank.com.br/docs/apis-pagbank" target="_blank">
+          <div class="link-info"><strong>API do PagBank</strong><span>developer.pagbank.com.br</span></div>
+          <span class="link-tag">Documentação</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANCO DE DADOS -->
+  <div class="section" id="banco-dados">
+    <h2>🗄️ Banco de Dados</h2>
+    <p>Recursos para aprender SQL e bancos de dados na nuvem.</p>
+
+    <div class="category">
+      <h3>Google Cloud</h3>
+      <div class="links">
+        <a class="link-item" href="https://cloud.google.com/learn?hl=pt-BR" target="_blank">
+          <div class="link-info"><strong>Cursos e Certificações — Google Cloud</strong><span>cloud.google.com</span></div>
+          <span class="link-tag">Certificação</span>
+        </a>
+        <a class="link-item" href="https://www.skills.google/focuses/936?locale=pt_BR" target="_blank">
+          <div class="link-info"><strong>Cloud SQL para MySQL</strong><span>skills.google.com</span></div>
+          <span class="link-tag">Laboratório</span>
+        </a>
+        <a class="link-item" href="https://cloud.google.com/free?hl=pt-br" target="_blank">
+          <div class="link-info"><strong>Google Cloud Free Tier</strong><span>cloud.google.com</span></div>
+          <span class="link-tag">Gratuito</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ELETRÔNICA -->
+  <div class="section" id="eletronica">
+    <h2>⚡ Eletrônica</h2>
+    <p>Projetos e tutoriais com Raspberry Pi e eletrônica embarcada.</p>
+
+    <div class="category">
+      <h3>Raspberry Pi — Referências Oficiais</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.raspberrypi.com/for-home/" target="_blank">
+          <div class="link-info"><strong>Raspberry Pi para Casa</strong><span>raspberrypi.com</span></div>
+          <span class="link-tag">Oficial</span>
+        </a>
+        <a class="link-item" href="https://www.raspberrypi.com/tutorials/" target="_blank">
+          <div class="link-info"><strong>Tutoriais Oficiais</strong><span>raspberrypi.com</span></div>
+          <span class="link-tag">Tutorial</span>
+        </a>
+        <a class="link-item" href="https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico" target="_blank">
+          <div class="link-info"><strong>Primeiros Passos com o Raspberry Pi Pico</strong><span>projects.raspberrypi.org</span></div>
+          <span class="link-tag">Microcontrolador</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Projetos Práticos</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.raspberrypi.com/tutorials/how-to-build-a-super-slim-smart-mirror/" target="_blank">
+          <div class="link-info"><strong>Espelho Inteligente</strong><span>raspberrypi.com</span></div>
+          <span class="link-tag">Projeto</span>
+        </a>
+        <a class="link-item" href="https://www.youtube.com/watch?v=moCOf6vRQyA" target="_blank">
+          <div class="link-info"><strong>Instalando o Magic Mirror do Zero</strong><span>youtube.com</span></div>
+          <span class="link-tag">Vídeo</span>
+        </a>
+        <a class="link-item" href="https://www.youtube.com/watch?v=NsLmnxv4ii8" target="_blank">
+          <div class="link-info"><strong>Segredos do Espelho Inteligente</strong><span>youtube.com</span></div>
+          <span class="link-tag">Vídeo</span>
+        </a>
+        <a class="link-item" href="https://www.youtube.com/watch?v=lgUQih_rSjw" target="_blank">
+          <div class="link-info"><strong>Android Auto no Raspberry Pi</strong><span>youtube.com</span></div>
+          <span class="link-tag">Vídeo</span>
+        </a>
+        <a class="link-item" href="https://www.ionos.com/digitalguide/server/configuration/raspberry-pi-plex/" target="_blank">
+          <div class="link-info"><strong>Raspberry Pi + Plex — Servidor de Mídia</strong><span>ionos.com</span></div>
+          <span class="link-tag">Tutorial</span>
+        </a>
+        <a class="link-item" href="https://www.makerhero.com/guia/raspberry-pi/central-de-midia-raspberry-pi/" target="_blank">
+          <div class="link-info"><strong>Central Multimídia com Raspberry Pi</strong><span>makerhero.com</span></div>
+          <span class="link-tag">Guia</span>
+        </a>
+        <a class="link-item" href="https://www.youtube.com/watch?v=U_GVtfht9S0" target="_blank">
+          <div class="link-info"><strong>Raspberry Pi Zero 2 W — Apresentação</strong><span>youtube.com</span></div>
+          <span class="link-tag">Vídeo</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Onde Comprar</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.makerhero.com/" target="_blank">
+          <div class="link-info"><strong>MakerHero</strong><span>makerhero.com</span></div>
+          <span class="link-tag">Loja</span>
+        </a>
+        <a class="link-item" href="https://www.robocore.net/raspberry-pi" target="_blank">
+          <div class="link-info"><strong>RoboCore — Raspberry Pi</strong><span>robocore.net</span></div>
+          <span class="link-tag">Loja</span>
+        </a>
+        <a class="link-item" href="https://www.makerhero.com/produto/raspberry-pi-pico-2-w/" target="_blank">
+          <div class="link-info"><strong>Raspberry Pi Pico 2 W</strong><span>makerhero.com</span></div>
+          <span class="link-tag">Produto</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TREINAMENTOS -->
+  <div class="section" id="treinamento">
+    <h2>🏆 Treinamentos e Certificações</h2>
+    <p>Plataformas para aprender, se certificar e crescer na carreira.</p>
+
+    <div class="category">
+      <h3>Grow with Google</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.skills.google/catalog?locale=pt_BR" target="_blank">
+          <div class="link-info"><strong>Google Skills — Catálogo Completo</strong><span>skills.google.com</span></div>
+          <span class="link-tag">Plataforma</span>
+        </a>
+        <a class="link-item" href="https://grow.google/ai/" target="_blank">
+          <div class="link-info"><strong>Treinamentos em Inteligência Artificial</strong><span>grow.google</span></div>
+          <span class="link-tag">IA</span>
+        </a>
+        <a class="link-item" href="https://grow.google/students/" target="_blank">
+          <div class="link-info"><strong>AI for Students</strong><span>grow.google</span></div>
+          <span class="link-tag">Estudantes</span>
+        </a>
+        <a class="link-item" href="https://grow.google/career-dreamer/" target="_blank">
+          <div class="link-info"><strong>Career Dreamer — Planejamento de Carreira</strong><span>grow.google</span></div>
+          <span class="link-tag">Carreira</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Udemy — Google Certificates</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.udemy.com/partner/google/ai-professional-certificate-learning-path/" target="_blank">
+          <div class="link-info"><strong>Google AI Professional Certificate</strong><span>udemy.com</span></div>
+          <span class="link-tag">Certificado</span>
+        </a>
+        <a class="link-item" href="https://www.udemy.com/partner/google/accelerate-job-search-with-ai-learning-path/" target="_blank">
+          <div class="link-info"><strong>Accelerate Your Job Search with AI</strong><span>udemy.com</span></div>
+          <span class="link-tag">Carreira</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Senac</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.linkedin.com/in/ejsenac/" target="_blank">
+          <div class="link-info"><strong>Empresa Júnior Senac</strong><span>linkedin.com</span></div>
+          <span class="link-tag">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJETOS ESPECIAIS -->
+  <div class="section" id="projetos">
+    <h2>🚀 Projetos Especiais</h2>
+    <p>Projetos criativos para ir além do básico.</p>
+
+    <div class="category">
+      <h3>Espelho Inteligente — Magic Mirror</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.raspberrypi.com/tutorials/how-to-build-a-super-slim-smart-mirror/" target="_blank">
+          <div class="link-info"><strong>Como Construir um Espelho Inteligente</strong><span>raspberrypi.com</span></div>
+          <span class="link-tag">Tutorial</span>
+        </a>
+        <a class="link-item" href="https://www.youtube.com/watch?v=moCOf6vRQyA" target="_blank">
+          <div class="link-info"><strong>Instalando o Magic Mirror do Zero</strong><span>youtube.com</span></div>
+          <span class="link-tag">Vídeo</span>
+        </a>
+        <a class="link-item" href="https://www.youtube.com/watch?v=NsLmnxv4ii8" target="_blank">
+          <div class="link-info"><strong>Segredos do Espelho Inteligente</strong><span>youtube.com</span></div>
+          <span class="link-tag">Vídeo</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Servidor de Mídia</h3>
+      <div class="links">
+        <a class="link-item" href="https://www.ionos.com/digitalguide/server/configuration/raspberry-pi-plex/" target="_blank">
+          <div class="link-info"><strong>Raspberry Pi + Plex</strong><span>ionos.com</span></div>
+          <span class="link-tag">Tutorial</span>
+        </a>
+        <a class="link-item" href="https://www.makerhero.com/guia/raspberry-pi/central-de-midia-raspberry-pi/" target="_blank">
+          <div class="link-info"><strong>Central Multimídia com Raspberry Pi</strong><span>makerhero.com</span></div>
+          <span class="link-tag">Guia</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Portal de Aprendizado em Tecnologia — v1.0 · <a href="https://github.com/EnzoCros/portal-aprendizado-tecnologia" target="_blank">GitHub</a></p>
+</footer>
+
+<script>
+  const links = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('.section');
+
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      links.forEach(l => l.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      link.classList.add('active');
+      document.getElementById(link.dataset.target).classList.add('active');
+    });
+  });
+</script>
 
 </body>
-
 </html>
