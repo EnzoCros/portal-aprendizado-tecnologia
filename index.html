@@ -103,6 +103,18 @@
       margin-left: 12px;
     }
 
+    .loading {
+      color: #aaa;
+      font-size: 0.9rem;
+      padding: 20px 0;
+    }
+
+    .erro {
+      color: #e03131;
+      font-size: 0.9rem;
+      padding: 20px 0;
+    }
+
     /* MODAL */
     .modal-overlay {
       display: none;
@@ -191,235 +203,52 @@
   <a href="#" data-target="banco-dados"> Banco de Dados</a>
   <a href="#" data-target="eletronica"> Eletrônica</a>
   <a href="#" data-target="treinamento"> Treinamentos</a>
-  <a href="#" data-target="projetos"> Projetos Especiais</a>
+  <a href="#" data-target="projetos-especiais"> Projetos Especiais</a>
   <a href="#" data-target="meus-projetos"> Meus Projetos</a>
 </nav>
 
 <main>
 
-  <!-- PROGRAMAÇÃO -->
   <div class="section active" id="programacao">
     <h2> Programação</h2>
     <p>Cursos e referências para aprender linguagens e desenvolvimento.</p>
-
-    <div class="category">
-  <h3>Google Skills</h3>
-  <div class="links" id="links-programacao">
-        <div class="link-item" onclick="openModal('Java no Google Skills', 'Curso', 'skills.google.com', 'Aprenda Java com os cursos oficiais do Google Skills. Java é uma das linguagens mais usadas no mercado de trabalho, especialmente em sistemas corporativos e desenvolvimento Android.', 'https://www.skills.google/catalog?keywords=java&locale=pt_BR')">
-          <div class="link-info"><strong>Cursos sobre Java</strong><span>skills.google.com</span></div>
-          <span class="link-tag">Curso</span>
-        </div>
-        <div class="link-item" onclick="openModal('Firebase no Google Skills', 'Curso', 'skills.google.com', 'Firebase é uma plataforma do Google para criar apps web e mobile com banco de dados em tempo real, autenticação e hospedagem, tudo gerenciado na nuvem.', 'https://www.skills.google/catalog?keywords=firebase&locale=pt_BR')">
-          <div class="link-info"><strong>Cursos sobre Firebase</strong><span>skills.google.com</span></div>
-          <span class="link-tag">Curso</span>
-        </div>
-        <div class="link-item" onclick="openModal('Projetos Raspberry Pi em PT-BR', 'Tutoriais', 'projects.raspberrypi.org', 'Plataforma oficial do Raspberry Pi com projetos e tutoriais em português. Ótimo pra quem está começando a programar com eletrônica.', 'https://projects.raspberrypi.org/pt-BR')">
-          <div class="link-info"><strong>Projetos Raspberry Pi (PT-BR)</strong><span>projects.raspberrypi.org</span></div>
-          <span class="link-tag">Tutoriais</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>APIs de Pagamento</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('API do Mercado Pago', 'Documentação', 'mercadopago.com.br', 'Documentação oficial para integrar os serviços de pagamento do Mercado Pago em seus projetos. Muito usado em e-commerces e apps de venda no Brasil.', 'https://www.mercadopago.com.br/developers/pt')">
-          <div class="link-info"><strong>API do Mercado Pago</strong><span>mercadopago.com.br</span></div>
-          <span class="link-tag">Documentação</span>
-        </div>
-        <div class="link-item" onclick="openModal('API do PagBank', 'Documentação', 'developer.pagbank.com.br', 'O PagBank disponibiliza uma série de serviços para que você gerencie cobranças, pagamentos e transferências diretamente nas suas aplicações.', 'https://developer.pagbank.com.br/docs/apis-pagbank')">
-          <div class="link-info"><strong>API do PagBank</strong><span>developer.pagbank.com.br</span></div>
-          <span class="link-tag">Documentação</span>
-        </div>
-      </div>
-    </div>
+    <div id="links-programacao"><p class="loading">Carregando...</p></div>
   </div>
 
-  <!-- BANCO DE DADOS -->
   <div class="section" id="banco-dados">
     <h2> Banco de Dados</h2>
     <p>Recursos para aprender SQL e bancos de dados na nuvem.</p>
-
-    <div class="category">
-      <h3>Google Cloud</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Cursos e Certificações Google Cloud', 'Certificação', 'cloud.google.com', 'Aprenda sobre banco de dados, infraestrutura e serviços na nuvem com o Google Cloud. Ótimo para quem quer uma certificação reconhecida no mercado.', 'https://cloud.google.com/learn?hl=pt-BR')">
-          <div class="link-info"><strong>Cursos e Certificações — Google Cloud</strong><span>cloud.google.com</span></div>
-          <span class="link-tag">Certificação</span>
-        </div>
-       
-        <div class="link-item" onclick="openModal('Google Cloud Free Tier', 'Gratuito', 'cloud.google.com', 'O Google Cloud oferece um nível gratuito com vários serviços e produtos para você praticar e aprender sem gastar nada. Ideal para estudantes.', 'https://cloud.google.com/free?hl=pt-br')">
-          <div class="link-info"><strong>Google Cloud Free Tier</strong><span>cloud.google.com</span></div>
-          <span class="link-tag">Gratuito</span>
-        </div>
-      </div>
-    </div>
+    <div id="links-banco-dados"><p class="loading">Carregando...</p></div>
   </div>
 
-  <!-- ELETRÔNICA -->
   <div class="section" id="eletronica">
     <h2> Eletrônica</h2>
     <p>Projetos e tutoriais com Raspberry Pi e eletrônica embarcada.</p>
-
-    <div class="category">
-      <h3>Raspberry Pi — Referências Oficiais</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Raspberry Pi para Casa', 'Oficial', 'raspberrypi.com', 'O Raspberry Pi é um computador de baixo custo que cabe na palma da mão. Nessa página você encontra tudo sobre como usá-lo em casa para projetos criativos.', 'https://www.raspberrypi.com/for-home/')">
-          <div class="link-info"><strong>Raspberry Pi para Casa</strong><span>raspberrypi.com</span></div>
-          <span class="link-tag">Oficial</span>
-        </div>
-        <div class="link-item" onclick="openModal('Tutoriais Oficiais Raspberry Pi', 'Tutorial', 'raspberrypi.com', 'Guias oficiais com passo a passo para criar projetos com o Raspberry Pi. Desde iniciantes até projetos avançados como servidores e automação.', 'https://www.raspberrypi.com/tutorials/')">
-          <div class="link-info"><strong>Tutoriais Oficiais</strong><span>raspberrypi.com</span></div>
-          <span class="link-tag">Tutorial</span>
-        </div>
-        <div class="link-item" onclick="openModal('Primeiros Passos com o Raspberry Pi Pico', 'Microcontrolador', 'projects.raspberrypi.org', 'O Raspberry Pi Pico é um microcontrolador pequeno e barato, ótimo para projetos de eletrônica. Esse tutorial ensina do zero como programá-lo.', 'https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico')">
-          <div class="link-info"><strong>Primeiros Passos com o Raspberry Pi Pico</strong><span>projects.raspberrypi.org</span></div>
-          <span class="link-tag">Microcontrolador</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>Projetos Práticos</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Espelho Inteligente', 'Projeto', 'raspberrypi.com', 'Tutorial oficial do Raspberry Pi para construir um espelho inteligente que mostra informações como hora, clima e notícias na sua superfície.', 'https://www.raspberrypi.com/tutorials/how-to-build-a-super-slim-smart-mirror/')">
-          <div class="link-info"><strong>Espelho Inteligente</strong><span>raspberrypi.com</span></div>
-          <span class="link-tag">Projeto</span>
-        </div>
-        <div class="link-item" onclick="openModal('Instalando o Magic Mirror do Zero', 'Vídeo', 'youtube.com', 'Vídeo em português mostrando como instalar e configurar o aplicativo Magic Mirror no Raspberry Pi do zero, passo a passo.', 'https://www.youtube.com/watch?v=moCOf6vRQyA')">
-          <div class="link-info"><strong>Instalando o Magic Mirror do Zero</strong><span>youtube.com</span></div>
-          <span class="link-tag">Vídeo</span>
-        </div>
-        <div class="link-item" onclick="openModal('Segredos do Espelho Inteligente', 'Vídeo', 'youtube.com', 'Super dicas para personalizar e turbinar seu espelho inteligente com módulos extras como calendário, previsão do tempo e muito mais.', 'https://www.youtube.com/watch?v=NsLmnxv4ii8')">
-          <div class="link-info"><strong>Segredos do Espelho Inteligente</strong><span>youtube.com</span></div>
-          <span class="link-tag">Vídeo</span>
-        </div>
-        <div class="link-item" onclick="openModal('Android Auto no Raspberry Pi', 'Vídeo', 'youtube.com', 'Aprenda como integrar o Android Auto em um projeto com Raspberry Pi, transformando qualquer carro num veículo conectado.', 'https://www.youtube.com/watch?v=lgUQih_rSjw')">
-          <div class="link-info"><strong>Android Auto no Raspberry Pi</strong><span>youtube.com</span></div>
-          <span class="link-tag">Vídeo</span>
-        </div>
-        <div class="link-item" onclick="openModal('Raspberry Pi + Plex — Servidor de Mídia', 'Tutorial', 'ionos.com', 'Aprenda a transformar seu Raspberry Pi em um servidor de mídia pessoal usando o Plex, podendo acessar seus filmes e músicas de qualquer lugar.', 'https://www.ionos.com/digitalguide/server/configuration/raspberry-pi-plex/')">
-          <div class="link-info"><strong>Raspberry Pi + Plex — Servidor de Mídia</strong><span>ionos.com</span></div>
-          <span class="link-tag">Tutorial</span>
-        </div>
-        <div class="link-item" onclick="openModal('Central Multimídia com Raspberry Pi', 'Guia', 'makerhero.com', 'Guia completo da MakerHero para transformar seu Raspberry Pi em uma central de entretenimento para a sua casa.', 'https://www.makerhero.com/guia/raspberry-pi/central-de-midia-raspberry-pi/')">
-          <div class="link-info"><strong>Central Multimídia com Raspberry Pi</strong><span>makerhero.com</span></div>
-          <span class="link-tag">Guia</span>
-        </div>
-        <div class="link-item" onclick="openModal('Raspberry Pi Zero 2 W', 'Vídeo', 'youtube.com', 'Conheça o Raspberry Pi Zero 2 W, o computador de placa única mais compacto e acessível da linha Raspberry Pi.', 'https://www.youtube.com/watch?v=U_GVtfht9S0')">
-          <div class="link-info"><strong>Raspberry Pi Zero 2 W — Apresentação</strong><span>youtube.com</span></div>
-          <span class="link-tag">Vídeo</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>Onde Comprar</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('MakerHero', 'Loja', 'makerhero.com', 'Loja brasileira especializada em produtos para makers: Raspberry Pi, Arduino, sensores, robôs e tudo que você precisa para seus projetos.', 'https://www.makerhero.com/')">
-          <div class="link-info"><strong>MakerHero</strong><span>makerhero.com</span></div>
-          <span class="link-tag">Loja</span>
-        </div>
-        <div class="link-item" onclick="openModal('RoboCore — Raspberry Pi', 'Loja', 'robocore.net', 'A RoboCore é outra loja brasileira com uma grande variedade de componentes e kits para projetos com Raspberry Pi e eletrônica em geral.', 'https://www.robocore.net/raspberry-pi')">
-          <div class="link-info"><strong>RoboCore — Raspberry Pi</strong><span>robocore.net</span></div>
-          <span class="link-tag">Loja</span>
-        </div>
-        <div class="link-item" onclick="openModal('Raspberry Pi Pico 2 W', 'Produto', 'makerhero.com', 'O Raspberry Pi Pico 2 W é um microcontrolador com chip ARM Cortex-M33, Wi-Fi e Bluetooth integrados. Perfeito para projetos de IoT e automação.', 'https://www.makerhero.com/produto/raspberry-pi-pico-2-w/')">
-          <div class="link-info"><strong>Raspberry Pi Pico 2 W</strong><span>makerhero.com</span></div>
-          <span class="link-tag">Produto</span>
-        </div>
-      </div>
-    </div>
+    <div id="links-eletronica"><p class="loading">Carregando...</p></div>
   </div>
 
-  <!-- TREINAMENTOS -->
   <div class="section" id="treinamento">
     <h2> Treinamentos e Certificações</h2>
     <p>Plataformas para aprender, se certificar e crescer na carreira.</p>
-
-    <div class="category">
-      <h3>Google Skills</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Google Skills — Catálogo Completo', 'Plataforma', 'skills.google.com', 'Todos os treinamentos e certificações do Google reunidos em um só lugar, disponíveis em português. Ótima plataforma gratuita para estudantes de TI.', 'https://www.skills.google/catalog?locale=pt_BR')">
-          <div class="link-info"><strong>Google Skills — Catálogo Completo</strong><span>skills.google.com</span></div>
-          <span class="link-tag">Plataforma</span>
-        </div>
-        <div class="link-item" onclick="openModal('Google Cloud — Cursos e Certificações', 'Cloud', 'cloud.google.com', 'Aprenda e se certifique nos serviços de nuvem do Google. Ótimo para quem quer trabalhar com infraestrutura e tecnologia em larga escala.', 'https://cloud.google.com/learn?hl=pt-BR')">
-          <div class="link-info"><strong>Google Cloud — Cursos e Certificações</strong><span>cloud.google.com</span></div>
-          <span class="link-tag">Cloud</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>Senac</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Empresa Júnior Senac', 'LinkedIn', 'linkedin.com', 'A Empresa Júnior do Senac São Paulo é uma ótima oportunidade para ganhar experiência prática em projetos reais ainda durante o curso.', 'https://www.linkedin.com/in/ejsenac/')">
-          <div class="link-info"><strong>Empresa Júnior Senac</strong><span>linkedin.com</span></div>
-          <span class="link-tag">LinkedIn</span>
-        </div>
-      </div>
-    </div>
+    <div id="links-treinamento"><p class="loading">Carregando...</p></div>
   </div>
 
-  <!-- PROJETOS ESPECIAIS -->
-  <div class="section" id="projetos">
+  <div class="section" id="projetos-especiais">
     <h2> Projetos Especiais</h2>
     <p>Projetos criativos para ir além do básico.</p>
-
-    <div class="category">
-      <h3>Espelho Inteligente — Magic Mirror</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Como Construir um Espelho Inteligente', 'Tutorial', 'raspberrypi.com', 'Tutorial passo a passo do site oficial do Raspberry Pi para montar um espelho inteligente que exibe informações úteis na sua superfície.', 'https://www.raspberrypi.com/tutorials/how-to-build-a-super-slim-smart-mirror/')">
-          <div class="link-info"><strong>Como Construir um Espelho Inteligente</strong><span>raspberrypi.com</span></div>
-          <span class="link-tag">Tutorial</span>
-        </div>
-        <div class="link-item" onclick="openModal('Instalando o Magic Mirror do Zero', 'Vídeo', 'youtube.com', 'Vídeo completo em português sobre como instalar e configurar o aplicativo Magic Mirror no Raspberry Pi do absoluto zero.', 'https://www.youtube.com/watch?v=moCOf6vRQyA')">
-          <div class="link-info"><strong>Instalando o Magic Mirror do Zero</strong><span>youtube.com</span></div>
-          <span class="link-tag">Vídeo</span>
-        </div>
-        <div class="link-item" onclick="openModal('Segredos do Espelho Inteligente', 'Vídeo', 'youtube.com', 'Super dicas para personalizar seu espelho inteligente com módulos de calendário, clima, notícias e muito mais.', 'https://www.youtube.com/watch?v=NsLmnxv4ii8')">
-          <div class="link-info"><strong>Segredos do Espelho Inteligente</strong><span>youtube.com</span></div>
-          <span class="link-tag">Vídeo</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="category">
-      <h3>Servidor de Mídia</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Raspberry Pi + Plex', 'Tutorial', 'ionos.com', 'Monte um servidor de mídia pessoal transformando seu Raspberry Pi em um Plex server. Acesse seus filmes e músicas de qualquer dispositivo.', 'https://www.ionos.com/digitalguide/server/configuration/raspberry-pi-plex/')">
-          <div class="link-info"><strong>Raspberry Pi + Plex</strong><span>ionos.com</span></div>
-          <span class="link-tag">Tutorial</span>
-        </div>
-        <div class="link-item" onclick="openModal('Central Multimídia com Raspberry Pi', 'Guia', 'makerhero.com', 'Guia da MakerHero para transformar seu Raspberry Pi em uma central de entretenimento completa para sua casa.', 'https://www.makerhero.com/guia/raspberry-pi/central-de-midia-raspberry-pi/')">
-          <div class="link-info"><strong>Central Multimídia com Raspberry Pi</strong><span>makerhero.com</span></div>
-          <span class="link-tag">Guia</span>
-        </div>
-      </div>
-    </div>
+    <div id="links-projetos-especiais"><p class="loading">Carregando...</p></div>
   </div>
 
-  <!-- MEUS PROJETOS -->
   <div class="section" id="meus-projetos">
     <h2> Meus Projetos</h2>
     <p>Projetos que desenvolvi durante minha trajetória no técnico e na faculdade.</p>
-
-    <div class="category">
-      <h3>Projetos Acadêmicos</h3>
-      <div class="links">
-        <div class="link-item" onclick="openModal('Atividade Final — 3° ano T.I', 'Primeiro Site', 'enzocros.github.io', 'Meu primeiro site, desenvolvido no 3° ano do técnico em T.I. Uma página de apresentação pessoal com minhas soft e hard skills, feita com HTML e CSS do zero.', 'https://enzocros.github.io/ATIVIDADE-FINAL/')">
-          <div class="link-info"><strong>Atividade Final — 3° ano T.I</strong><span>enzocros.github.io</span></div>
-          <span class="link-tag">Primeiro Site</span>
-        </div>
-      </div>
-    </div>
+    <div id="links-meus-projetos"><p class="loading">Carregando...</p></div>
   </div>
 
 </main>
 
 <footer>
-  <p>Portal de Aprendizado em Tecnologia — v1.0 · <a href="https://github.com/EnzoCros/portal-aprendizado-tecnologia" target="_blank">GitHub</a></p>
+  <p>Portal de Aprendizado em Tecnologia — v1.1 · <a href="https://github.com/EnzoCros/portal-aprendizado-tecnologia" target="_blank">GitHub</a></p>
   <p style="margin-top: 8px;">Feito por <a href="https://enzocros.github.io/ATIVIDADE-FINAL/" target="_blank">Enzo Cros</a></p>
 </footer>
 
@@ -436,6 +265,81 @@
 </div>
 
 <script>
+  // Mapeamento: id da section -> categoria no banco
+  const tabs = [
+    { sectionId: 'programacao',      categoria: 'programacao'       },
+    { sectionId: 'banco-dados',      categoria: 'banco-dados'        },
+    { sectionId: 'eletronica',       categoria: 'eletronica'         },
+    { sectionId: 'treinamento',      categoria: 'treinamentos'       },
+    { sectionId: 'projetos-especiais', categoria: 'projetos-especiais' },
+    { sectionId: 'meus-projetos',    categoria: 'meus-projetos'      },
+  ];
+
+  // Extrai o domínio de uma URL
+  function getDomain(url) {
+    try { return new URL(url).hostname.replace('www.', ''); }
+    catch { return url; }
+  }
+
+  // Renderiza os cards agrupados por subcategoria
+  function renderLinks(containerId, itens) {
+    const container = document.getElementById(containerId);
+
+    if (!itens.length) {
+      container.innerHTML = '<p class="loading">Nenhum conteúdo encontrado.</p>';
+      return;
+    }
+
+    // Agrupa por subcategoria
+    const grupos = {};
+    itens.forEach(item => {
+      const sub = item.subcategoria || 'Geral';
+      if (!grupos[sub]) grupos[sub] = [];
+      grupos[sub].push(item);
+    });
+
+    let html = '';
+    for (const subcategoria in grupos) {
+      html += `<div class="category"><h3>${subcategoria}</h3><div class="links">`;
+      grupos[subcategoria].forEach(item => {
+        const domain = getDomain(item.url);
+        const titulo = item.titulo.replace(/'/g, "\\'");
+        const tag = (item.tag || '').replace(/'/g, "\\'");
+        const descricao = (item.descricao || '').replace(/'/g, "\\'");
+        const url = item.url.replace(/'/g, "\\'");
+        html += `
+          <div class="link-item" onclick="openModal('${titulo}', '${tag}', '${domain}', '${descricao}', '${url}')">
+            <div class="link-info">
+              <strong>${item.titulo}</strong>
+              <span>${domain}</span>
+            </div>
+            <span class="link-tag">${item.tag || ''}</span>
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    container.innerHTML = html;
+  }
+
+  // Busca os dados da API para cada tab
+  async function carregarTab(sectionId, categoria) {
+    const containerId = `links-${sectionId}`;
+    try {
+      const res = await fetch(`http://localhost:3000/api/conteudos/${categoria}`);
+      if (!res.ok) throw new Error('Erro na resposta da API');
+      const dados = await res.json();
+      renderLinks(containerId, dados);
+    } catch (err) {
+      document.getElementById(containerId).innerHTML =
+        '<p class="erro">Erro ao carregar conteúdos. Verifique se o servidor está rodando.</p>';
+    }
+  }
+
+  // Carrega todas as tabs ao iniciar
+  tabs.forEach(tab => carregarTab(tab.sectionId, tab.categoria));
+
+  // Navegação entre tabs
   const navLinks = document.querySelectorAll('nav a');
   const sections = document.querySelectorAll('.section');
 
@@ -449,6 +353,7 @@
     });
   });
 
+  // Modal
   function openModal(title, tag, domain, desc, url) {
     document.getElementById('modalTitle').textContent = title;
     document.getElementById('modalTag').textContent = tag;
