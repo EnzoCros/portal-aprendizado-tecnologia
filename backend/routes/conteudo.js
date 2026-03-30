@@ -3,26 +3,24 @@ const router = express.Router();
 const db = require('../db');
 
 // Busca todos os conteúdos
-router.get('/', (req, res) => {
-    db.query('SELECT * FROM conteudos', (err, results) => {
-        if (err) {
-            res.status(500).json({ erro: 'Erro ao buscar conteúdos' });
-            return;
-        }
+router.get('/', async (req, res) => {
+    try {
+        const [results] = await db.query('SELECT * FROM conteudos');
         res.json(results);
-    });
+    } catch (err) {
+        res.status(500).json({ erro: 'Erro ao buscar conteúdos' });
+    }
 });
 
 // Busca conteúdos por categoria
-router.get('/:categoria', (req, res) => {
+router.get('/:categoria', async (req, res) => {
     const { categoria } = req.params;
-    db.query('SELECT * FROM conteudos WHERE categoria = ?', [categoria], (err, results) => {
-        if (err) {
-            res.status(500).json({ erro: 'Erro ao buscar conteúdos' });
-            return;
-        }
+    try {
+        const [results] = await db.query('SELECT * FROM conteudos WHERE categoria = ?', [categoria]);
         res.json(results);
-    });
+    } catch (err) {
+        res.status(500).json({ erro: 'Erro ao buscar conteúdos' });
+    }
 });
 
 module.exports = router;

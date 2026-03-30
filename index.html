@@ -199,6 +199,7 @@
 </header>
 
 <nav>
+  <a href="#" data-target="cadastro"> Cadastro</a>
   <a href="#" class="active" data-target="programacao"> Programação</a>
   <a href="#" data-target="banco-dados"> Banco de Dados</a>
   <a href="#" data-target="eletronica"> Eletrônica</a>
@@ -209,6 +210,27 @@
 
 <main>
 
+  <div class="section" id="cadastro">
+  <h2> Cadastro</h2>
+  <p>Crie sua conta no portal.</p>
+
+  <div style="background: white; border: 1px solid #e0e0e0; border-radius: 6px; padding: 30px; max-width: 400px;">
+    <div style="margin-bottom: 16px;">
+      <label style="font-size: 0.85rem; color: #555; display: block; margin-bottom: 6px;">Nome</label>
+      <input id="cad-nome" type="text" placeholder="Seu nome" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+    </div>
+    <div style="margin-bottom: 16px;">
+      <label style="font-size: 0.85rem; color: #555; display: block; margin-bottom: 6px;">Email</label>
+      <input id="cad-email" type="email" placeholder="seu@email.com" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+    </div>
+    <div style="margin-bottom: 24px;">
+      <label style="font-size: 0.85rem; color: #555; display: block; margin-bottom: 6px;">Senha</label>
+      <input id="cad-senha" type="password" placeholder="••••••••" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+    </div>
+    <button onclick="cadastrar()" style="width: 100%; background: #1a1a2e; color: white; padding: 12px; border: none; border-radius: 6px; font-size: 0.95rem; cursor: pointer;">Cadastrar</button>
+    <p id="cad-msg" style="margin-top: 14px; font-size: 0.85rem; text-align: center;"></p>
+  </div>
+</div>
   <div class="section active" id="programacao">
     <h2> Programação</h2>
     <p>Cursos e referências para aprender linguagens e desenvolvimento.</p>
@@ -265,6 +287,32 @@
 </div>
 
 <script>
+  async function cadastrar() {
+  const nome = document.getElementById('cad-nome').value;
+  const email = document.getElementById('cad-email').value;
+  const senha = document.getElementById('cad-senha').value;
+  const msg = document.getElementById('cad-msg');
+
+  try {
+    const res = await fetch('http://localhost:3000/api/cadastro', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome, email, senha })
+    });
+    const data = await res.json();
+
+    if (res.ok) {
+      msg.style.color = 'green';
+      msg.textContent = '✅ ' + data.mensagem;
+    } else {
+      msg.style.color = 'red';
+      msg.textContent = '❌ ' + data.erro;
+    }
+  } catch (err) {
+    msg.style.color = 'red';
+    msg.textContent = '❌ Erro ao conectar com o servidor.';
+  }
+}
   // Mapeamento: id da section -> categoria no banco
   const tabs = [
     { sectionId: 'programacao',      categoria: 'programacao'       },
