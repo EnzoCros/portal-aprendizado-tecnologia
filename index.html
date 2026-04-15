@@ -294,7 +294,7 @@
   const msg = document.getElementById('cad-msg');
 
   try {
-    const res = await fetch('http://localhost:3000/api/cadastro', {
+    const res = await fetch('https://portal-aprendizado.onrender.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nome, email, senha })
